@@ -1,0 +1,59 @@
+﻿:root {
+  --bodyHeightScale: 1; }
+
+@keyframes TemporaryShow {
+  0%, 100% {
+    visibility: visible; } }
+
+@keyframes TemporaryHide {
+  0%, 100% {
+    visibility: hidden; } }
+
+
+
+
+
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+  html body {
+    -webkit-user-select: none;
+    font-family: Roboto-Regular;
+    font-size: 20vh;
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+
+/* No idea what the above or highlight does but as most gauges have this stuff I'm not going to mess with it */
+#highlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10; }
+
+/* Electricity is a MSFS created element that will show/hide the whole gauge to simulate turning it on or off */
+#Electricity {
+  width: 100%;
+  height: 100%; }
+  #Electricity[state=off] {
+    display: none; }
+
+
+
+
+/* Load on of the MSFS fonts */
+@font-face {
+  font-family: "name";
+  src: url("/Fonts/name.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*home screen backround*/
+body {
+	background-color: rgb(255, 255, 255); /* For backlight gauges make the background transparent */
+}
